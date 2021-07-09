@@ -1,0 +1,90 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+			
+public class Program
+{
+  public static void Main()
+  {
+    string[] nomes = new string[10];
+    bool add;
+    string nomeRun, yes ="a";
+    int nomesAdd =0;
+    bool trava = false;
+    //int repetiu=0;
+    //int run = 10;
+    
+    while(nomesAdd<nomes.Length && trava==false)
+    {
+      add = true;
+      Console.WriteLine("Escreva o nome Nº "+(nomesAdd+1));
+      nomeRun = Console.ReadLine();
+      for (int i = 0; i < nomesAdd;i++)
+      {
+        if(nomeRun==nomes[i])
+        {
+          add=false;
+        }
+			}
+ 
+      if(add)
+      {
+      	nomes[nomesAdd]=nomeRun;
+        nomesAdd +=1;
+      }else
+      {
+        Console.WriteLine(nomesAdd);
+        Console.WriteLine("Quer Continuar? Sim ou Não");
+      	yes=Console.ReadLine();
+      	if(yes=="Sim"||yes=="sim"||yes=="s")
+        {
+          
+        }else if(yes=="Não"||yes=="nao"||yes=="n")
+        {
+          trava=true;
+        }
+      }
+      
+      if(nomesAdd==10)
+      {
+        Console.WriteLine("Concluido");
+      }
+      
+    }
+    
+    //for(int j= 0, i=0; trava==false;){
+    //for ( i = 0; i<run; i++)
+   	//{
+   	//	Console.WriteLine("Escreva o nome nº"+(i+1));
+    //	nomeRun = Console.ReadLine();
+    //nomes[i] = nomeRun;
+    //}
+   	// for (int k =0; k <run; k++)
+    //{
+    //for(int h=k+1; h<run;h++)
+    // {
+    //   if(nomes[h] == nomes[k])
+    //  {
+ 	  //   repetiu=+1;
+    // Console.WriteLine("Nome nº"+(h+1)+" repetiu com o nome nº"+(k+1));
+    // }
+		//}
+ 	  //}
+    //if (repetiu==0)
+    //{
+    //trava=true;
+    //}else if(repetiu>0)
+    //{
+		//Console.WriteLine("Quer Continuar? Sim ou Não");
+    //yes=Console.ReadLine();
+    //if(yes=="Sim"||yes=="sim"||yes=="s")
+    //{ 
+    // }else if(yes=="Não"||yes=="nao"||yes=="n")
+    // {
+    //trava=true;
+    // }
+    //}
+    //}
+    
+  }
+}

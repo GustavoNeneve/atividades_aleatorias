@@ -1,0 +1,42 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+			
+public class Program
+{
+  public static void Main()
+  {
+    List<string> armas = new List<string>();
+    bool sS = true;
+    
+    string resp;
+    int slot;
+    armas.Add("Faca");
+    armas.Add("Pistola Laser");
+    
+    for (int i =0; sS== true;)
+    {
+      
+      Console.WriteLine("Esperando novo comando");
+      Console.WriteLine("Digite um numero para ver o item no Slot");
+      Console.WriteLine("Digite 'A' para add nova arma ou 'S' para sair");
+      resp = Console.ReadLine();
+      bool sucesso = int.TryParse(resp, out slot);
+      if (sucesso)
+      {
+      		Console.WriteLine("Usando "+ armas[slot]);
+      }else
+      {
+        if (resp == "A")
+        {
+          Console.WriteLine("Nome da nova arma:");
+          armas.Add(Console.ReadLine());
+				}else if(resp == "S")
+        {
+          sS=false;
+        }
+      }
+		}
+    //Console.WriteLine("Hello C#");
+  }
+}
